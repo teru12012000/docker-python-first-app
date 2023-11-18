@@ -1,0 +1,7 @@
+{
+    "name":"python-first-app-with-Docker",
+    "dockerFile":"Dockerfile",
+    "extensions":[
+        "ms-python.python"
+    ],
+}
