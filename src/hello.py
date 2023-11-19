@@ -1,3 +1,7 @@
+'''
+Dockerを用いてpythonを実行する確認のコード
+'''
+
 import pandas as pd
 df=pd.read_csv("./csv/data.csv")
 
