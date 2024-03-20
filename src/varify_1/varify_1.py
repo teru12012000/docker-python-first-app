@@ -3,16 +3,22 @@
 - 調査内容としてはcsvがからの時にデータを追加するというものにする
 '''
 import pandas as pd
+import csv
 
 
 if __name__=="__main__":
+    path='./../csv/empty.csv'
     try:
-        df=pd.read_csv('./../csv/empty.csv')
+        df=pd.read_csv(path)
     except:
-        df=pd.DataFrame()
         print("空だよ")
-        df['id']=[0,1,2]
-        df['value']=['プログラミング','読書','散歩']
+        sub_id=[0,1,2]
+        sub_data=[['プログラミング'],['読書'],['散歩']]
+        with open(path, 'w') as f:
+            writer = csv.writer(f)
+            for i, row in zip(sub_id, sub_data):
+                writer.writerow([i]+row)
+        df=pd.read_csv(path)
     print(df)
 
 '''
